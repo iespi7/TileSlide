@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.tileslide.model;
 
+
 import java.util.Random;
 
 public class Frame {
