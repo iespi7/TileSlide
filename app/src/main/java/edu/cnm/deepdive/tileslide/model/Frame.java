@@ -1,6 +1,7 @@
 package edu.cnm.deepdive.tileslide.model;
 
 
+
 import java.util.Random;
 
 public class Frame {
@@ -23,6 +24,7 @@ public class Frame {
     scramble();
   }
 
+
   public void reset() {
     copy(start, tiles);
     moves = 0;
@@ -37,10 +39,14 @@ public class Frame {
     moves = 0;
   }
 
+
   public Tile[][] getTiles() {
     return tiles;
   }
 
+  public Tile [][] getStart(){
+    return start;
+  }
   public int getMoves() {
     return moves;
   }
@@ -62,6 +68,7 @@ public class Frame {
         && tiles[toRow][toCol] == null
     ) {
       swap(tiles, fromRow, fromCol, toRow, toCol);
+      ++ moves;
       return true;
     }
     return false;
